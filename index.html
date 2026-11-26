@@ -35,15 +35,49 @@
           <div class="hero-shade"></div>
         </div>
         <div class="hero-content">
-          <h1>Fresh shine for Brisbane drives.</h1>
-          <p>
-            Friendly mobile car detailing for Brisbane, Ipswich and the Gold Coast. Family owned, free quotes and
-            upfront pricing - we travel up to 50&nbsp;km.
-          </p>
-          <div class="btn-group">
-            <a class="btn btn-primary" href="./contact.html">Free quote</a>
-            <a class="btn btn-ghost" href="tel:0468583151">Call 0468 583 151</a>
+          <div class="hero-copy">
+            <h1>Fresh shine for Brisbane drives.</h1>
+            <p>
+              Friendly mobile car detailing for Brisbane, Ipswich and the Gold Coast. Family owned, free quotes and
+              upfront pricing - we travel up to 50&nbsp;km.
+            </p>
+            <div class="btn-group">
+              <a class="btn btn-ghost" href="tel:0468583151">Call 0468 583 151</a>
+            </div>
           </div>
+
+          <form class="hero-form form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="sr-only">
+              <label>Do not fill this out: <input name="bot-field" /></label>
+            </p>
+            <h2>Get a free quote</h2>
+            <p class="hero-form-lead">Tell us a few details - we reply fast, Mon to Sat.</p>
+            <div class="field">
+              <label for="hero-name">Name</label>
+              <input id="hero-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="hero-phone">Phone</label>
+              <input id="hero-phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="field">
+              <label for="hero-suburb">Suburb</label>
+              <input id="hero-suburb" name="suburb" type="text" placeholder="e.g. Ipswich" required />
+            </div>
+            <div class="field">
+              <label for="hero-service">Service</label>
+              <select id="hero-service" name="service">
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="Exterior detailing">Exterior detailing</option>
+                <option value="Interior detailing">Interior detailing</option>
+                <option value="Full detail">Full detail</option>
+                <option value="Maintenance clean">Maintenance clean</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Send quote request</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
 

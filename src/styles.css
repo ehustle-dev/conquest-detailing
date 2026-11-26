@@ -219,13 +219,15 @@ body.home .site-header:not(.is-scrolled) {
   width: min(1120px, calc(100% - 2.4rem));
   margin: 0 auto;
   padding: calc(var(--header-h) + 2.2rem) 0 3.2rem;
-  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 22rem);
+  gap: 2rem 2.5rem;
+  align-items: center;
   text-align: left;
-  justify-self: start;
   animation: riseIn 0.9s var(--ease) both;
 }
 
-.hero-content > * {
+.hero-copy {
   max-width: 36rem;
 }
 
@@ -237,11 +239,54 @@ body.home .site-header:not(.is-scrolled) {
   margin-bottom: 1rem;
 }
 
-.hero p {
+.hero-copy > p {
   font-size: 1.08rem;
   max-width: 34rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1.6rem;
+}
+
+.hero-form {
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  border-radius: calc(var(--radius) + 0.15rem);
+  padding: 1.35rem 1.25rem 1.2rem;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  gap: 0.75rem;
+}
+
+.hero-form h2 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  color: var(--green-deep);
+  margin: 0;
+}
+
+.hero-form-lead {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: -0.15rem 0 0.15rem;
+}
+
+.hero-form .field label {
+  font-size: 0.85rem;
+}
+
+.hero-form .field input,
+.hero-form .field select {
+  padding: 0.7rem 0.85rem;
+}
+
+.hero-form .btn {
+  width: 100%;
+  margin-top: 0.15rem;
+}
+
+.hero-form .form-status {
+  min-height: 1.1rem;
+  font-size: 0.88rem;
 }
 
 .btn-group {
@@ -790,7 +835,12 @@ body.home .site-header:not(.is-scrolled) {
   }
 
   .hero-content {
+    grid-template-columns: 1fr;
     padding: calc(var(--header-h) + 1.6rem) 0 2.6rem;
+  }
+
+  .hero-form {
+    max-width: 26rem;
   }
 }
 

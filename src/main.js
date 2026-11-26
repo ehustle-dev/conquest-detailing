@@ -45,10 +45,12 @@ if (reveals.length && "IntersectionObserver" in window) {
   reveals.forEach((el) => el.classList.add("is-visible"));
 }
 
-const form = document.querySelector("form[name='contact']");
-const status = document.querySelector(".form-status");
+const forms = document.querySelectorAll("form[name='contact']");
+const FORM_ENDPOINT = "";
 
-if (form) {
+forms.forEach((form) => {
+  const status = form.querySelector(".form-status");
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (status) {
@@ -57,7 +59,6 @@ if (form) {
     }
 
     const data = new FormData(form);
-    const FORM_ENDPOINT = "";
 
     if (!FORM_ENDPOINT) {
       const lines = [];
@@ -101,4 +102,4 @@ if (form) {
       }
     }
   });
-}
+});
