@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Conquest Detailing</title>
+    <meta
+      name="description"
+      content="Exterior, interior and full car detailing across Brisbane, Ipswich and the Gold Coast. Free quotes with upfront pricing. Call 0468 583 151."
+    />
+    <link rel="icon" href="./images/logo.jpg" type="image/jpeg" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="./" aria-label="Conquest Detailing home">
+          <img class="brand-logo" src="./images/logo.jpg" alt="Conquest Detailing" width="80" height="80" />
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Primary">
+          <a href="./">Home</a>
+          <a href="./services.html" aria-current="page">Services</a>
+          <a href="./contact.html">Contact Us</a>
+        </nav>
+        <a class="header-phone" href="tel:0468583151">0468 583 151</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Services</p>
+          <h1>Detailing packages that fit your car.</h1>
+          <p>
+            Friendly, thorough mobile detailing with free quotes and fixed upfront pricing. We come to you across
+            Brisbane, Ipswich and the Gold Coast - up to 50&nbsp;km.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="container split">
+          <div class="service-list reveal">
+            <article class="service-item">
+              <span class="service-num">01</span>
+              <div>
+                <h3>Exterior detailing</h3>
+                <p>
+                  Hand wash, wheel and tyre clean, glass, and a protective finish so paint looks deep and glossy again.
+                </p>
+              </div>
+            </article>
+            <article class="service-item">
+              <span class="service-num">02</span>
+              <div>
+                <h3>Interior detailing</h3>
+                <p>
+                  Vacuum, dust, wipe-down and refresh for seats, carpets, plastics and glass - a cabin that feels new.
+                </p>
+              </div>
+            </article>
+            <article class="service-item">
+              <span class="service-num">03</span>
+              <div>
+                <h3>Full detail</h3>
+                <p>Inside and out in one visit when you want the complete reset before a sale, trip or special day.</p>
+              </div>
+            </article>
+            <article class="service-item">
+              <span class="service-num">04</span>
+              <div>
+                <h3>Maintenance cleans</h3>
+                <p>Regular keep-on-top details so your daily driver stays sharp without a big weekend scrub.</p>
+              </div>
+            </article>
+          </div>
+          <div class="media-frame reveal">
+            <img
+              src="./images/interior-clean.jpg"
+              alt="Clean car interior after a detail"
+              width="1152"
+              height="864"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div class="media-frame reveal">
+            <img
+              src="./images/exterior-shine.jpg"
+              alt="Glossy exterior finish after detailing"
+              width="1152"
+              height="864"
+              loading="lazy"
+            />
+          </div>
+          <div class="reveal">
+            <p class="eyebrow">How it works</p>
+            <h2 class="section-title">Simple booking. Clear price.</h2>
+            <p class="section-lead">
+              Tell us your suburb, vehicle and what you need. We send a free quote with upfront pricing, then come to
+              you Mon to Sat.
+            </p>
+            <div class="feature-grid">
+              <article class="feature">
+                <h3>1. Quote</h3>
+                <p>Share a few details - we reply with a clear price.</p>
+              </article>
+              <article class="feature">
+                <h3>2. Book</h3>
+                <p>Pick a day that suits. We travel up to 50&nbsp;km.</p>
+              </article>
+              <article class="feature">
+                <h3>3. Detail</h3>
+                <p>We work on your driveway or preferred spot.</p>
+              </article>
+              <article class="feature">
+                <h3>4. Drive happy</h3>
+                <p>Leave with a fresh finish and no surprises.</p>
+              </article>
+            </div>
+            <div class="btn-group" style="margin-top: 1.5rem">
+              <a class="btn btn-primary" href="./contact.html">Get a free quote</a>
+              <a class="btn btn-outline" href="tel:0468583151">Call 0468 583 151</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img class="footer-logo" src="./images/logo.jpg" alt="Conquest Detailing" width="80" height="80" />
+          <p>Mobile car detailing for Brisbane, Ipswich, the Gold Coast and surrounds up to 50&nbsp;km.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <div class="footer-links">
+            <a href="./">Home</a>
+            <a href="./services.html">Services</a>
+            <a href="./contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <div class="footer-contact">
+            <a href="tel:0468583151">0468 583 151</a>
+            <a href="mailto:samconquest259@gmail.com">samconquest259@gmail.com</a>
+            <span>Mon-Sat · Free quotes</span>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Conquest Detailing</span>
+        <span>Brisbane · Ipswich · Gold Coast</span>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+    <script>
+      document.querySelectorAll("[data-year]").forEach((el) => {
+        el.textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>
