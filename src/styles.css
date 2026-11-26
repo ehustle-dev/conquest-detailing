@@ -90,12 +90,32 @@ select {
   align-items: center;
   transition: background 0.35s var(--ease), backdrop-filter 0.35s var(--ease), border-color 0.35s var(--ease);
   border-bottom: 1px solid transparent;
+  --header-fg: var(--ink);
+  --header-fg-strong: var(--green-deep);
+  --header-fg-accent: var(--green);
+  --header-toggle-bg: rgba(255, 255, 255, 0.85);
+  --header-toggle-border: var(--line);
+  color: var(--header-fg);
+}
+
+/* Over a dark hero: light nav until sticky white bar */
+body.home .site-header:not(.is-scrolled) {
+  --header-fg: rgba(255, 255, 255, 0.92);
+  --header-fg-strong: #ffffff;
+  --header-fg-accent: #ffffff;
+  --header-toggle-bg: rgba(255, 255, 255, 0.14);
+  --header-toggle-border: rgba(255, 255, 255, 0.4);
 }
 
 .site-header.is-scrolled {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   border-bottom-color: var(--line);
+  --header-fg: var(--ink);
+  --header-fg-strong: var(--green-deep);
+  --header-fg-accent: var(--green);
+  --header-toggle-bg: rgba(255, 255, 255, 0.85);
+  --header-toggle-border: var(--line);
 }
 
 .header-inner {
@@ -124,20 +144,20 @@ select {
 .nav a {
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--ink);
-  opacity: 0.82;
+  color: var(--header-fg);
+  opacity: 0.9;
   transition: opacity 0.2s var(--ease), color 0.2s var(--ease);
 }
 
 .nav a:hover,
 .nav a[aria-current="page"] {
   opacity: 1;
-  color: var(--green);
+  color: var(--header-fg-accent);
 }
 
 .header-phone {
   font-weight: 700;
-  color: var(--green-deep);
+  color: var(--header-fg-strong);
   letter-spacing: 0.01em;
 }
 
@@ -145,9 +165,9 @@ select {
   display: none;
   width: 2.6rem;
   height: 2.6rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--header-toggle-border);
   border-radius: 0.7rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--header-toggle-bg);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -159,15 +179,15 @@ select {
   display: block;
   width: 1.15rem;
   height: 2px;
-  background: var(--green-deep);
+  background: var(--header-fg-strong);
   border-radius: 2px;
 }
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: clamp(28rem, 62vh, 36rem);
   display: grid;
-  align-items: end;
+  align-items: center;
   overflow: hidden;
   color: var(--white);
 }
@@ -189,8 +209,8 @@ select {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(11, 61, 46, 0.35) 0%, rgba(11, 61, 46, 0.55) 42%, rgba(11, 61, 46, 0.88) 100%),
-    linear-gradient(90deg, rgba(11, 61, 46, 0.55), transparent 55%);
+    linear-gradient(90deg, rgba(8, 36, 28, 0.82) 0%, rgba(8, 36, 28, 0.55) 42%, rgba(8, 36, 28, 0.28) 100%),
+    linear-gradient(180deg, rgba(8, 36, 28, 0.45) 0%, rgba(8, 36, 28, 0.25) 45%, rgba(8, 36, 28, 0.55) 100%);
 }
 
 .hero-content {
@@ -198,9 +218,15 @@ select {
   z-index: 1;
   width: min(1120px, calc(100% - 2.4rem));
   margin: 0 auto;
-  padding: calc(var(--header-h) + 3.5rem) 0 4.5rem;
-  max-width: 38rem;
+  padding: calc(var(--header-h) + 1.5rem) 0 2.4rem;
+  max-width: none;
+  text-align: left;
+  justify-self: start;
   animation: riseIn 0.9s var(--ease) both;
+}
+
+.hero-content > * {
+  max-width: 34rem;
 }
 
 .hero-logo {
@@ -755,14 +781,24 @@ select {
   .nav a {
     padding: 0.75rem 0.85rem;
     border-radius: 0.65rem;
+    color: var(--ink);
+  }
+
+  .nav a:hover,
+  .nav a[aria-current="page"] {
+    color: var(--green);
   }
 
   .header-phone {
     display: none;
   }
 
+  .hero {
+    min-height: clamp(24rem, 56vh, 32rem);
+  }
+
   .hero-content {
-    padding-bottom: 3.2rem;
+    padding: calc(var(--header-h) + 1.1rem) 0 2rem;
   }
 }
 
